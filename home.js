@@ -121,11 +121,63 @@ document.getElementById("withdraw-money-btn")
 
         const newAvailableBalance = availableBalance - withdrawAmount;
 
-        // document.getElementById("available-balance").innerText = newAvailableBalance
         setInnerText("available-balance", newAvailableBalance);
 
 
     })
+
+// send money feature
+document.getElementById("send-money-btn")
+    .addEventListener("click",function(e){
+        e.preventDefault();
+
+        const accountNumber = getValue("send-account-number");
+        const sendAmount = getIntValue("send-amount");
+        const pinNumber = getIntValue("send-pin-number");
+        const availableBalance = getInnerText("available-balance");
+        console.log(sendAmount);
+
+        if (accountNumber.length !== 11) {
+            alert("Please enter valid account number")
+            return;
+        }
+
+        if (sendAmount === NaN) {
+            alert("Please input integer amount");
+            return;
+        }
+
+        if (pinNumber !== pin) {
+            alert("Please enter valid pin number")
+            return;
+        }
+
+        const newAvailableBalance = availableBalance - sendAmount;
+
+        setInnerText("available-balance",newAvailableBalance);
+    })
+
+// get bonus feature
+document.getElementById("get-btn")
+    .addEventListener("click", function (e) {
+        e.preventDefault();
+        const coupon = "abtech_09"
+
+        const couponNumber = getValue("coupon-number");
+
+        const availableBalance = getInnerText("available-balance");
+
+        if(couponNumber !== coupon){
+            alert("invalid coupon")
+            return;
+        }
+        const newAvailableBalance = availableBalance + 1000;
+
+        setInnerText("available-balance", newAvailableBalance);
+
+        alert("Congratulation....... 1000BDT add your account")
+    })
+
 
 // toggling
 document.getElementById("add-btn")
@@ -149,11 +201,18 @@ document.getElementById("cash-out-btn")
 document.getElementById("transfer-money-btn")
     .addEventListener("click", function () {
         toggle("Transfer-money-container");
-        
+
         // button color togool
         toggleActive("transfer-money-btn");
     })
 
+document.getElementById("get-bonus-btn")
+    .addEventListener("click", function () {
+        toggle("get-bonus-container");
+
+        // button color togool
+        toggleActive("get-bonus-btn");
+    })
 
 // Logout 
 

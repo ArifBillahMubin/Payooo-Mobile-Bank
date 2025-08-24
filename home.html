@@ -39,29 +39,40 @@
 
         <!-- card section -->
         <div class="p-6 h-fit grid grid-cols-3 gap-4">
+            <!-- add money -->
 
             <div id="add-btn"
                 class="border-2 border-[#0874F2] bg-[#0874f20d] rounded-xl  py-5 flex flex-col justify-center items-center active-btn">
                 <img src="./assets/wallet1.png" alt="">
                 <p>Add money</p>
             </div>
+
+            <!-- cash out -->
             <div id="cash-out-btn"
                 class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center active-btn">
                 <img src="./assets/send1.png" alt="">
-                <p>Cashout</p>
+                <p>Cash Out</p>
             </div>
+
+            <!-- transfer money -->
             <div id="transfer-money-btn" class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center active-btn">
                 <img src="./assets/money1.png" alt="">
                 <p>Transfer Money</p>
             </div>
-            <div class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center active-btn">
+
+            <!-- get bonus -->
+            <div id="get-bonus-btn" class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center active-btn">
                 <img src="./assets/bonus1.png" alt="">
                 <p>Get Bonus</p>
             </div>
+
+            <!-- pay bill -->
             <div class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center active-btn">
                 <img src="./assets/purse1.png" alt="">
                 <p>Pay Bill</p>
             </div>
+
+            <!-- transaction -->
             <div class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center active-btn">
                 <img src="./assets/transaction1.png" alt="">
                 <p>Transactions</p>
@@ -70,6 +81,8 @@
     </div>
     <!-- All from design -->
     <div class="px-6 mt-8 pb-8">
+
+        <!-- add-money-from-container -->
         <div class="form" id="add-money-from-container">
             <h1 class="text-[20px] font-bold mb-4">Add money</h1>
             <form class="bg-white p-6 rounded-xl">
@@ -106,6 +119,7 @@
             </form>
         </div>
 
+        <!-- cash-out-from-container -->
         <div id="cash-out-from-container" class="hidden form">
             <h1 class="text-[20px] font-bold mb-4">Cash Out</h1>
             <form class="bg-white p-6 rounded-xl">
@@ -131,7 +145,46 @@
             </form>
         </div>
 
-        <div id="Transfer-money-container" class="hidden form">transfer money</div>
+        <!-- Transfer-money-container -->
+        <div id="Transfer-money-container" class="hidden form">
+            <h1 class="text-[20px] font-bold mb-4">Transfer Money</h1>
+            <form class="bg-white p-6 rounded-xl">
+                <div>
+                    <label for="" class="font-semibold">User Account Number</label>
+                    <br>
+                    <input type="text" id="send-account-number" placeholder="Enter 11 digit number"
+                        class="input mt-3 mb-3 rounded-3xl w-full" />
+                </div>
+                <div>
+                    <label for="" class="font-semibold">Amount</label>
+                    <br>
+                    <input type="text" placeholder="Enter amount to withdraw" class="input mt-3 mb-3 rounded-3xl w-full"
+                        id="send-amount" />
+                </div>
+                <div>
+                    <label for="" class="font-semibold">Pin Number</label>
+                    <br>
+                    <input type="text" placeholder="Enter 4 digit pin number" class="input mt-3 mb-3 rounded-3xl w-full"
+                        id="send-pin-number" />
+                </div>
+                <button class="btn bg-[#0874F2] mt-3 w-full rounded-3xl text-white" id="send-money-btn">Send Now</button>
+            </form>
+        </div>
+
+        <!-- Get Bonus -->
+        <div id="get-bonus-container" class="hidden form">
+            <h1 class="text-[20px] font-bold mb-4">Get Bonus </h1>
+            <form class="bg-white p-6 rounded-xl">
+                <div>
+                    <label for="" class="font-semibold">Enter Bonus Coupon</label>
+                    <br>
+                    <input type="text" id="coupon-number" placeholder="Enter your coupon"
+                        class="input mt-3 mb-3 rounded-3xl w-full" />
+                </div>
+                <button class="btn bg-[#0874F2] mt-3 w-full rounded-3xl text-white" id="get-btn">Get Bonus</button>
+            </form>
+        </div>
+
     </div>
     <script src="./home.js"></script>
 </body>
