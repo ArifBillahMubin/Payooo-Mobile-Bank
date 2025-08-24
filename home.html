@@ -41,28 +41,28 @@
         <div class="p-6 h-fit grid grid-cols-3 gap-4">
 
             <div id="add-btn"
-                class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center ">
+                class="border-2 border-[#0874F2] bg-[#0874f20d] rounded-xl  py-5 flex flex-col justify-center items-center active-btn">
                 <img src="./assets/wallet1.png" alt="">
                 <p>Add money</p>
             </div>
             <div id="cash-out-btn"
-                class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center ">
+                class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center active-btn">
                 <img src="./assets/send1.png" alt="">
                 <p>Cashout</p>
             </div>
-            <div class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center ">
+            <div id="transfer-money-btn" class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center active-btn">
                 <img src="./assets/money1.png" alt="">
                 <p>Transfer Money</p>
             </div>
-            <div class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center ">
+            <div class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center active-btn">
                 <img src="./assets/bonus1.png" alt="">
                 <p>Get Bonus</p>
             </div>
-            <div class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center ">
+            <div class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center active-btn">
                 <img src="./assets/purse1.png" alt="">
                 <p>Pay Bill</p>
             </div>
-            <div class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center ">
+            <div class="border-2 border-gray-300 rounded-xl  py-5 flex flex-col justify-center items-center active-btn">
                 <img src="./assets/transaction1.png" alt="">
                 <p>Transactions</p>
             </div>
@@ -70,7 +70,7 @@
     </div>
     <!-- All from design -->
     <div class="px-6 mt-8 pb-8">
-        <div id="add-money-from-container">
+        <div class="form" id="add-money-from-container">
             <h1 class="text-[20px] font-bold mb-4">Add money</h1>
             <form class="bg-white p-6 rounded-xl">
                 <div>
@@ -106,7 +106,7 @@
             </form>
         </div>
 
-        <div id="cash-out-from-container" class="hidden">
+        <div id="cash-out-from-container" class="hidden form">
             <h1 class="text-[20px] font-bold mb-4">Cash Out</h1>
             <form class="bg-white p-6 rounded-xl">
                 <div>
@@ -130,6 +130,8 @@
                 <button class="btn bg-[#0874F2] mt-3 w-full rounded-3xl text-white" id="withdraw-money-btn">Withdraw Money</button>
             </form>
         </div>
+
+        <div id="Transfer-money-container" class="hidden form">transfer money</div>
     </div>
     <script src="./home.js"></script>
 </body>
